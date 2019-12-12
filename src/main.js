@@ -10,15 +10,13 @@ btn.addEventListener('click', e =>{
         connectToApiUser(userInput);
 }) : null
 
+
 function showUserInfo(data){
     removeErrorContainer();
-    //sets info
     document.querySelector('.user-info').style.display = 'flex';
     document.querySelector('.user-avatar').src = data.avatar_url;
     document.querySelector('.user-avatar').alt = `${data.login} avatar`;
     document.querySelector('.username').innerText = data.login;
-    //if info its not completed
-
     const hasName= document.querySelector('.fullname');
     data.name == null ? hasName.innerText = `${data.login}` : hasName.innerText = data.name;
     const userHasBio = document.querySelector('.user-bio');
@@ -28,9 +26,7 @@ function showUserInfo(data){
 }
 
 function showUserRepos(data){
-    //sets to display repos title
     document.querySelector('.repos-title').style.display = 'flex';
-    //
     const section = document.querySelector('#user-repos');
     section.style.display = 'flex';
     const reposTable = document.createElement('table');
@@ -42,8 +38,6 @@ function showUserRepos(data){
         const nameRepoCell = row.insertCell(0);
         nameRepoCell.innerHTML = `<a class="link-repo" href=${repo.svn_url}> <p>${repo.name}</p></a>`;
         const starsRepoCell = row.insertCell(1);
-        
-        //hacer que sean iconos
         starsRepoCell.innerHTML = `<i class="material-icons icon">star</i>${repo.stargazers_count}`;
         const forksRepoCell = row.insertCell(2);
         forksRepoCell.innerHTML = `<i class="material-icons share-icon">share</i>${repo.forks_count}`;

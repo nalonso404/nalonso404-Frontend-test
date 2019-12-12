@@ -25,8 +25,20 @@ describe("Manage user's repos" , function(){
     })
 })
 
+describe("Removes previous data from other user" , function(){
+    it ("Define removePreviousDataUser", function(){
+        expect(typeof removePreviousDataUser).toBe("function")
+    })
+})
+
 describe("Manage errors" , function(){
     it ("Define showError", function(){
         expect(typeof showUserRepos).toBe("function")
+    })
+})
+
+describe("Removes the error container in case the user exists" , function(){
+    it ("Define function removeErrorContainer", function(){
+        expect(typeof removeErrorContainer).toBe("function")
     })
 })
