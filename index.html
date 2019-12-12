@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Marfeel FrontendTest</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link rel="stylesheet" href="styles/stylesheet.css">   
+</head>
+<body>
+<div class="container">
+    <form class="search-wrapper" name="search" action="">
+        <div class="search-bar">
+            <input type="text" class="user-input" placeholder="Search username..." autofocus > 
+            <button id ="btn" type="submit">Search</button>
+        </div>
+
+        <div class="user-info" style="display: none;">
+                <img src="" alt=""class="user-avatar"/>
+                <div class="info-wrapper">
+                    <i class="username"></i>
+                    <h3 class="fullname"></h3>
+                    <p class="user-bio"></p>
+                </div>
+            </div>
+            
+            <h3 class="repos-title" style="display: none;">Repositories</h3>
+            <section class="user-repos" style="display: none;" id="user-repos">
+                
+               
+            </section>
+            
+            <div class="error-container error" style="display: none;">
+            
+            </div>   
+
+    </form>
+</div>
+
+    
+    
+
+
+<script src="src/apiServices.js"></script>
+<script src="src/main.js"></script>
+
+</body>
+</html>
+
